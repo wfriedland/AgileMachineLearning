@@ -4,7 +4,9 @@
     <extensionMap>
       <mapping pattern=".pycharmrc" type="PLAIN_TEXT" />
       <mapping pattern=".Python" type="PLAIN_TEXT" />
+      <mapping ext="so" type="PLAIN_TEXT" />
       <mapping ext="gz" type="PLAIN_TEXT" />
+      <removed_mapping ext="so" type="UNKNOWN" />
     </extensionMap>
   </component>
 </application>
