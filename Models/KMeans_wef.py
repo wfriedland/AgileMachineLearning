@@ -1,8 +1,10 @@
-from sklearn.cluster import KMeans
+import matplotlib
+matplotlib.use("agg")
 import matplotlib.pyplot as plt
+from sklearn.cluster import KMeans
 
 def wrapper_for_kmeans_wef(data, features):
-    specialk = KMeans(n_clusters=3, init='random',precompute_distances=True, random_state=23, verbose=True )
+    specialk = KMeans(n_clusters=3, init='random',precompute_distances=True, random_state=23, verbose=False )
     y_pred = specialk.fit_predict(data)
 
     # plot the points and visually detrmine if the centroids are positioned correctly
@@ -34,6 +36,9 @@ def wrapper_for_kmeans_wef(data, features):
     plt.title("Sepal length vs width")
     sp4.set_xlabel(features[0])
     sp4.set_ylabel(features[1])
-    plt.show()
-
+    plt.savefig("./KMeans_plot.jpg", dpi=None, facecolor='w', edgecolor='w',
+                orientation='portrait', papertype=None, format=None,
+                transparent=False, bbox_inches=None, pad_inches=0.1,
+                frameon=None)
     return 100
+
