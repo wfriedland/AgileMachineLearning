@@ -1,5 +1,9 @@
 *.dump
 settings.py
 .idea
+*.xml
 *.pyc
+*.png
+*.jpg
+.pycharmrc
 
